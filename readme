@@ -1,0 +1,13 @@
+1.
+https://redis.io/docs/getting-started/installation/install-redis-on-mac-os/
+brew services start redis
+
+
+2. redis java client
+
+https://github.com/redis/jedis
+<dependency>
+    <groupId>redis.clients</groupId>
+    <artifactId>jedis</artifactId>
+    <version>4.3.0</version>
+</dependency>
