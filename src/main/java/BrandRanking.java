@@ -36,9 +36,7 @@ public class BrandRanking {
                 + rating + ","
                 + previousRating + ","
                 + year + ","
-                + previousYear + ","
-                + previousYear + ","
-                ;
+                + previousYear;
     }
 
 

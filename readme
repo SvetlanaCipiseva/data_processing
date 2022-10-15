@@ -1,9 +1,33 @@
+Izveidot datu bāzi izmantojot kādu Key-value datu bāzu pārvaldības sistēmu (piemēram, Riak, Redis vai arī kādu citu).
+Datu bāzes pārvaldības sistēmu nav obligāti instalēt uz sava datora - drīkst izmantot pieejamās on-line.
+Izveidot skriptu, kas datu bāzē ievieto vismaz 500 ierakstus (var arī no faila).
+Izveidot skriptu, kas maina vairākus ierakstus (10-100).
+Izveidot skriptu, kas atlasa vairākus ierakstus (10-100).
+Izveidot skriptu, kas dzēš vairākus ierakstus (10-100).
+Skripts var tikt veidots jebkurā programmēšanas valodā, drīkst izmantot konkrētās DBVS skriptēšanas valodu (ja tāda ir).
+Ja datu struktūras un darbības ar tiem būs ļoti līdzīgas pasniedēja piemēram, tas tiks uzskatīts par plaģiātu un netiks
+vērtēts.
+Mājas darbu nodod veicot 2 darbības (lai nodotu mājas darbu obligāti ir jāveic abas darbības):
+1. Augšuplādējot datu bāzes izveides, datu ielādes un atskaišu veidošanas skriptus (ja tiek izmantoti papildus faili ar
+datiem utml, tad tie arī ir jāaugšuplādē estudijās). Šajos failos jābūt norādītam kādu DBVS un programēšanas valodu jūs izmantojat.
+
 1.
 https://redis.io/docs/getting-started/installation/install-redis-on-mac-os/
 brew services start redis
+brew services info redis
+brew services stop redis
+
 
 
 2. redis java client
+
+Supported glob-style patterns:
+
+h?llo matches hello, hallo and hxllo
+h*llo matches hllo and heeeello
+h[ae]llo matches hello and hallo, but not hillo
+h[^e]llo matches hallo, hbllo, ... but not hello
+h[a-b]llo matches hallo and hbllo
 
 https://github.com/redis/jedis
 <dependency>
