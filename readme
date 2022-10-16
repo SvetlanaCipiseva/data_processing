@@ -1,37 +1,38 @@
-Izveidot datu bāzi izmantojot kādu Key-value datu bāzu pārvaldības sistēmu (piemēram, Riak, Redis vai arī kādu citu).
-Datu bāzes pārvaldības sistēmu nav obligāti instalēt uz sava datora - drīkst izmantot pieejamās on-line.
-Izveidot skriptu, kas datu bāzē ievieto vismaz 500 ierakstus (var arī no faila).
-Izveidot skriptu, kas maina vairākus ierakstus (10-100).
-Izveidot skriptu, kas atlasa vairākus ierakstus (10-100).
-Izveidot skriptu, kas dzēš vairākus ierakstus (10-100).
-Skripts var tikt veidots jebkurā programmēšanas valodā, drīkst izmantot konkrētās DBVS skriptēšanas valodu (ja tāda ir).
-Ja datu struktūras un darbības ar tiem būs ļoti līdzīgas pasniedēja piemēram, tas tiks uzskatīts par plaģiātu un netiks
-vērtēts.
-Mājas darbu nodod veicot 2 darbības (lai nodotu mājas darbu obligāti ir jāveic abas darbības):
-1. Augšuplādējot datu bāzes izveides, datu ielādes un atskaišu veidošanas skriptus (ja tiek izmantoti papildus faili ar
-datiem utml, tad tie arī ir jāaugšuplādē estudijās). Šajos failos jābūt norādītam kādu DBVS un programēšanas valodu jūs izmantojat.
+Database Management System (DBMS): Redis
+Programming language: Java, Jedis (Java client for Redis)
+Source dataset: BrandRanking.csv (https://brandirectory.com/rankings/global/table)
+
+1
+Setup:
+1.1 Install Homebrew (https://brew.sh/)
+> /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+1.2 Install Redis (https://redis.io/docs/getting-started/installation)
+Install Redis on macOS
+> brew install redis
+1.3 Create java project with maven
+1.4 Add jedis dependency to pom.xml (https://github.com/redis/jedis/wiki/Getting-started)
+<dependency>
+    <groupId>redis.clients</groupId>
+    <artifactId>jedis</artifactId>
+    <version>4.3.0</version>
+</dependency>
 
 1.
-https://redis.io/docs/getting-started/installation/install-redis-on-mac-os/
-brew services start redis
-brew services info redis
-brew services stop redis
+Launch program:
+1.1 Launch Redis in terminal
+> brew services start redis
+to check (> brew services info redis)
+to stop (> brew services stop redis)
+1.2 Run main method in BrandRankingOperations.java
+1.3 Check result in console output
 
 
-
-2. redis java client
-
+________________________________________________
+Note:
 Supported glob-style patterns:
-
 h?llo matches hello, hallo and hxllo
 h*llo matches hllo and heeeello
 h[ae]llo matches hello and hallo, but not hillo
 h[^e]llo matches hallo, hbllo, ... but not hello
 h[a-b]llo matches hallo and hbllo
 
-https://github.com/redis/jedis
-<dependency>
-    <groupId>redis.clients</groupId>
-    <artifactId>jedis</artifactId>
-    <version>4.3.0</version>
-</dependency>
