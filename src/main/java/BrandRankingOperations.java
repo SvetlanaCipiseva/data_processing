@@ -10,7 +10,7 @@ import java.util.*;
 public class BrandRankingOperations {
 
     public static void main(String[] args) {
-        //Connecting to Redis Data Base with Jedis client
+        //Connecting to Redis Database with Jedis client
         try (JedisPool pool = new JedisPool("localhost", 6379)) {
             try (Jedis jedis = pool.getResource()) {
                 jedis.flushAll(); //Deleting everything from Data Base
