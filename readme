@@ -17,7 +17,7 @@ Install Redis on macOS
     <version>4.3.0</version>
 </dependency>
 
-1.
+2.
 Launch program:
 1.1 Launch Redis in terminal
 > brew services start redis
@@ -25,14 +25,3 @@ to check (> brew services info redis)
 to stop (> brew services stop redis)
 1.2 Run main method in BrandRankingOperations.java
 1.3 Check result in console output
-
-
-________________________________________________
-Note:
-Supported glob-style patterns:
-h?llo matches hello, hallo and hxllo
-h*llo matches hllo and heeeello
-h[ae]llo matches hello and hallo, but not hillo
-h[^e]llo matches hallo, hbllo, ... but not hello
-h[a-b]llo matches hallo and hbllo
-
